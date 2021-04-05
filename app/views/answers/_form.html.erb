@@ -1,0 +1,44 @@
+<%= form_for(dyn_receiver(@context, @id, @answer)) do |f| %>
+  <% if @answer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@answer.errors.count, "error") %> prohibited this answer from being saved:</h2>
+
+      <ul>
+      <% @answer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <table>
+    <thead>
+      <tr>
+        <%= render 'header' %>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <%= f.hidden_field :question_id, value: @answer.question_id %>
+        
+        <td class='maintext'><div class="field"><%= f.text_area :body %></div></td>
+        <td><div class="field"><%= f.collection_select :user_id, User.all, :id, :username %></div></td>
+        <td></td>
+        <td><%= @answer.comments.count %></td>
+        <td><%= @answer.votes.count %></td>
+        <td></td>
+
+        <% if @answer.id %>
+          <%= render 'actions', answer: @answer, action: :edit %>
+        <% else %>
+          <%= render 'actions', answer: @answer, action: :new %>
+        <% end %>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,14 @@
+<% case action %>
+<% when :index %>
+	<td class='actionbutton'></td>
+  <td class='actionbutton'><%= link_to 'Edit', dyn_edit_comment_path(@context, @id, comment) %></td>
+  <td class='actionbutton'><%= link_to 'Delete', dyn_comment_path(@context, @id, comment), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+<% when :edit %>
+	<td class='actionbutton'></td>
+	<td class='actionbutton'><%= link_to 'Back', dyn_question_path(@context, @id, comment.question) %></td>
+	<td class='actionbutton'><%= link_to 'Delete', dyn_comment_path(@context, @id, comment), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+<% when :new %>
+	<td class='actionbutton'></td>
+	<td class='actionbutton'><%= link_to 'Back', dyn_question_path(@context, @id, comment.question) %></td>
+	<td class='actionbutton'>Delete</td>
+<% end %>

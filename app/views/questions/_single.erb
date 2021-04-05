@@ -1,0 +1,11 @@
+<td><%= question.title %></td>
+<td class='maintext'><%= question.body %></td>
+<td><%= question.user.username %></td>
+<td>
+  <% question.tags.each do |tag| %>
+    <%= tag.topic %>
+  <% end %>
+</td>
+<td><%= question.comments.count %></td>
+<td><%= question.votes.count %></td>
+<td><%= question.answers.count %></td>

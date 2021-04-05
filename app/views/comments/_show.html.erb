@@ -1,0 +1,22 @@
+<table>
+  <thead>
+    <tr>
+      <%= render 'comments/header' %>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <%= render 'comments/single', comment: comment %>
+      <%= render 'comments/actions', comment: comment, action: :index %>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<div class='sub'>
+  <%= render 'comments/index', comments: comment.comments, item_type: :Comment, item_id: comment.id %>
+</div>
+
+<br>

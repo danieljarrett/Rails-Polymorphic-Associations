@@ -1,0 +1,195 @@
+  .box {
+      border: 2px solid gray;
+      margin: -2px;
+      padding: 0px;
+  }
+
+  .sub {
+      border-left: 1px solid gray;
+      padding-left: 3px !important;
+      padding: 0px;
+  }
+
+/* STANDARD STYLE */
+
+  body {
+    background-color: #222;
+    color: #fff;
+    font-family: monaco;
+    font-size: 10px;
+    line-height: 15px;
+  }
+
+  p, ol, ul, td {
+    font-family: monaco;
+    font-size: 10px;
+    line-height: 15px;
+  }
+
+  pre {
+    background-color: #111;
+    padding: 10px;
+    font-size: 11px;
+  }
+
+  a {
+    color: #aaa;
+    &:visited {
+      color: #aaa;
+    }
+    &:hover {
+      color: #000;
+      background-color: #fff;
+    }
+  }
+
+  div {
+    &.field, &.actions {
+      margin-bottom: 10px;
+    }
+  }
+
+  #notice {
+    color: green;
+  }
+
+  .field_with_errors {
+    padding: 2px;
+    background-color: red;
+    display: table;
+  }
+
+  #error_explanation {
+    width: 450px;
+    border: 2px solid red;
+    padding: 7px;
+    padding-bottom: 0;
+    margin-bottom: 20px;
+    background-color: #0f0f0f;
+    h2 {
+      text-align: left;
+      font-weight: bold;
+      padding: 5px 5px 5px 15px;
+      font-size: 12px;
+      margin: -7px;
+      margin-bottom: 0px;
+      background-color: #3ff;
+      color: #000;
+    }
+    ul li {
+      font-size: 12px;
+      list-style: square;
+    }
+  }
+
+/* TABLE STYLE */
+
+  table {
+    table-layout: fixed;
+    margin: 0px;
+  }
+
+  th, td {
+    display: table-cell;
+  }
+
+  th {
+    height: 50px;
+    vertical-align: middle;
+  }
+
+  td {
+    text-align: center;
+    vertical-align: top;
+    max-height: 135px;
+  }
+
+  th.maintext, td.maintext {
+    text-align: left;
+  }
+
+  th:not(.maintext):not(.actionbutton), td:not(.maintext):not(.actionbutton) {
+    min-width: 111px !important;
+    max-width: 111px !important;
+  }
+
+  th.maintext, td.maintext {
+    min-width: 425px !important;
+    max-width: 425px !important;
+  }
+
+  th.actionbutton, td.actionbutton {
+    min-width: 37px !important;
+    max-width: 37px !important;
+  }
+
+  textarea {
+    height: 131px;
+  }
+
+/* FORM STYLE */
+
+  #question_title {
+    width: 107px;
+  }
+
+  #question_body {
+    width: 421px;
+  }
+
+  #question_user_id {
+    width: 107px;
+  }
+
+  #question_tagstring {
+    width: 107px;
+  }
+
+  #answer_body {
+    width: 421px;
+  }
+
+  #answer_user_id {
+    width: 107px;
+  }
+
+  #comment_body {
+    width: 421px;
+  }
+
+  #comment_user_id {
+    width: 107px;
+  }
+
+/* BOX STYLE */
+
+  .box {
+    text-align: center;
+  }
+
+  .new {
+    text-align: left;
+  }
+
+  .sub {
+    margin-left: 111px;
+  }
+
+  .sub .sub {
+    margin-left: 50px;
+  }
+
+  .sub .sub .maintext {
+    min-width: 371px !important;
+    max-width: 371px !important;
+  }
+
+  .sub .sub .sub .maintext {
+    min-width: 317px !important;
+    max-width: 317px !important;
+  }
+
+  .sub .sub .sub .sub .maintext {
+    min-width: 263px !important;
+    max-width: 263px !important;
+  }

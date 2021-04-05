@@ -1,0 +1,11 @@
+<% answers.each do |answer| %>
+
+  <%= render 'answers/show', answer: answer %>
+
+<% end %>
+
+<% unless page == :user %>
+  <div class='new'>
+  	<%= link_to 'New Answer', dyn_new_answer_path(@context, @id, { question_id: @question.id }) %>
+  </div>
+<% end %>

@@ -1,0 +1,38 @@
+<div class='box'>
+
+  <p id="notice"><%= notice %></p>
+
+  <h1>Question (<%= @question.title %>)</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <%= render 'header' %>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <%= render 'single', question: @question %>
+        <%= render 'actions', question: @question, action: :show %>
+      </tr>
+    </tbody>
+  </table>
+
+  <br>
+
+  <div class='sub' style="border-left: 1px solid #222;">
+    <div class='sub'>
+      <%= render 'comments/index', comments: @question.comments, item_type: :Question, item_id: @question.id %>
+    </div>
+  </div>
+
+  <br>
+
+  <div class='sub'>
+    <%= render 'answers/index', answers: @question.answers, page: :question %>
+  </div>
+
+  <br>
+
+</div>

@@ -1,0 +1,22 @@
+<table>
+  <thead>
+    <tr>
+      <%= render 'answers/header' %>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <%= render 'answers/single', answer: answer %>
+      <%= render 'answers/actions', answer: answer, action: :index %>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<div class='sub'>
+  <%= render 'comments/index', comments: answer.comments, item_type: :Answer, item_id: answer.id %>
+</div>
+
+<br>

@@ -1,0 +1,18 @@
+<% case action %>
+<% when :index %>
+  <td class='actionbutton'><%= link_to 'Show', dyn_question_path(@context, @id, question) %></td>
+  <td class='actionbutton'><%= link_to 'Edit', dyn_edit_question_path(@context, @id, question) %></td>
+  <td class='actionbutton'><%= link_to 'Delete', dyn_question_path(@context, @id, question), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+<% when :show %>
+  <td class='actionbutton'><%= link_to 'Back', dyn_questions_path(@context, @id) %></td>
+  <td class='actionbutton'><%= link_to 'Edit', dyn_edit_question_path(@context, @id, question) %></td>
+  <td class='actionbutton'><%= link_to 'Delete', dyn_question_path(@context, @id, question), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+<% when :edit %>
+	<td class='actionbutton'><%= link_to 'Show', dyn_question_path(@context, @id, question) %></td>
+	<td class='actionbutton'><%= link_to 'Back', dyn_questions_path(@context, @id) %></td>
+	<td class='actionbutton'><%= link_to 'Delete', dyn_question_path(@context, @id, question), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+<% when :new %>
+	<td class='actionbutton'>Show</td>
+	<td class='actionbutton'><%= link_to 'Back', dyn_questions_path(@context, @id) %></td>
+	<td class='actionbutton'>Delete</td>
+<% end %>

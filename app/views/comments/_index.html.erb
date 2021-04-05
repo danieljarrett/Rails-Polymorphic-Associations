@@ -1,0 +1,11 @@
+<% comments.each do |comment| %>
+
+  <%= render 'comments/show', comment: comment %>
+
+<% end %>
+
+<% unless item_type == :user %>
+  <div class='new'>
+    <%= link_to 'New Comment', dyn_new_comment_path(@context, @id, { question_id: @question.id, item_type: item_type, item_id: item_id }) %>
+  </div>
+<% end %>

@@ -1,0 +1,28 @@
+<div class='box'>
+
+  <p id="notice"><%= notice %></p>
+
+  <h1>Questions (<%= @anchor %>)</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <%= render 'header' %>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @questions.each do |question| %>
+        <tr>
+          <%= render 'single', question: question %>
+          <%= render 'actions', question: question, action: :index %>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <div class='new'>
+    <%= link_to 'New Question', dyn_new_question_path(@context, @id) %>
+  </div>
+
+</div>
